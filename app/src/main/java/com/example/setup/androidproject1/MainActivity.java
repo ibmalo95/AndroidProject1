@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
         final Button convert = (Button) findViewById(R.id.convert);
         final EditText number = (EditText) findViewById(R.id.number);
         final EditText base = (EditText) findViewById(R.id.base);
+        final EditText output_base = (EditText) findViewById(R.id.output_base);
         final TextView result = (TextView) findViewById(R.id.result);
+
 
         convert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,14 +31,15 @@ public class MainActivity extends AppCompatActivity {
                 // take the value of number and value of base
                 String numberValue = number.getText().toString();
                 String baseValue = base.getText().toString();
+                String output_base_value = output_base.getText().toString();
 
                 try {
                     Integer resultText = Integer.parseInt(numberValue, Integer.parseInt(baseValue));
-                    result.setText(resultText.toString());
+                    result.setText(Integer.toString(resultText, Integer.parseInt(output_base_value)));
+                    base.setBackgroundColor(Color.BLACK);
                 }
                 catch(Exception e) {
-                    number.setTextColor(Color.RED);
-                    base.setTextColor(Color.RED);
+                    base.setBackgroundColor(Color.RED);
                     Toast.makeText(MainActivity.this, "An error occured!", Toast.LENGTH_SHORT).show();
                 }
             }
