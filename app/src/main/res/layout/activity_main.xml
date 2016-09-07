@@ -59,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/convert"
+            android:background="@color/default_text_color"
             android:textSize="@dimen/project_font_size"/>
 
     </LinearLayout>

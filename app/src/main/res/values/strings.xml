@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidProject1</string>
+    <string name="app_name">Number Base Conversion</string>
     <string name="enter_number">Enter Number</string>
     <string name="enter_base">Enter Input Base</string>
     <string name="result">Result</string>
